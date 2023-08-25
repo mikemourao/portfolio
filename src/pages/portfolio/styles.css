@@ -9,5 +9,10 @@
 
 .portfolio-body-styles {
     justify-content: center;
-    margin: 20px;
+    margin: 40px;
+}
+
+.portfolio-card-styles {
+    background: radial-gradient(circle, #e32626 0%, #451010 100%);
+    color: white;
 }
