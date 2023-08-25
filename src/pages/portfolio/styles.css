@@ -6,3 +6,8 @@
 .portfolio-header-styles {
     background: var(--color-header);
 }
+
+.portfolio-body-styles {
+    justify-content: center;
+    margin: 20px;
+}
