@@ -82,7 +82,6 @@ export function App() {
                         aprimorar minha atuação.</p>}
                 </Typography.Title>
             </Row>
-
         </Layout>
     );
 }
