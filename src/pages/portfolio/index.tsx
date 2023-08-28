@@ -10,6 +10,8 @@ import figma from '../../assets/figma.png'
 import blenderIcon from '../../assets/blender.png'
 import print3dIcon from '../../assets/3d.png'
 import user from '../../assets/Me.svg';
+import basysImg from '../../assets/basys.jpeg';
+const { Meta } = Card;
 import './styles.css';
 
 export function App() {
@@ -17,6 +19,20 @@ export function App() {
         const aboutSection = document.getElementById('about-section');
         if (aboutSection) {
             aboutSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const scrollToTechnologies = () => {
+        const technologiesSection = document.getElementById('technologies-section');
+        if (technologiesSection) {
+            technologiesSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
+    const scrollToProjects = () => {
+        const projectsSection = document.getElementById('projects-section');
+        if (projectsSection) {
+            projectsSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
 
@@ -62,8 +78,21 @@ export function App() {
                             fontWeight: "bold",
                             fontSize: 18
                         }}
+                        onClick={scrollToTechnologies}
                     >
-                        Lab
+                        Technologies
+                    </Button>
+                    <Button
+                        type="text"
+                        style={{
+                            margin: '0 10px',
+                            color: "#ffff",
+                            fontWeight: "bold",
+                            fontSize: 18
+                        }}
+                        onClick={scrollToProjects}
+                    >
+                        Projects
                     </Button>
                 </Col>
             </Row>
@@ -224,7 +253,8 @@ export function App() {
                     </Col>
                 </Row>
             </Row>
-            <Row className="portfolio-body-styles" align="middle">
+            {/* technologies */}
+            <Row id="technologies-section" className="portfolio-body-styles" align="middle">
                 <Typography.Title
                     level={1}
                     style={{ color: "#FFFF" }}
@@ -242,7 +272,7 @@ export function App() {
                         compõe meu cenário atual. A seguir, destaco algumas delas:</p>}
                 </Typography.Title>
             </Row>
-            <Row className="portfolio-body-styles" style={{marginTop: 0}}>
+            <Row className="portfolio-body-styles" style={{ marginTop: 0 }}>
                 <Col>
                     <Image
                         preview={false}
@@ -276,7 +306,7 @@ export function App() {
                     />
                 </Col>
             </Row>
-            <Row className="portfolio-body-styles" style={{marginTop: 0}}>
+            <Row className="portfolio-body-styles" style={{ marginTop: 0 }}>
                 <Col>
                     <Image
                         preview={false}
@@ -292,6 +322,58 @@ export function App() {
                     />
                 </Col>
             </Row>
+            {/* projects */}
+            <Row id="projects-section" className="portfolio-body-styles">
+                <Typography.Title
+                    level={1}
+                    style={{ color: "#FFFF", marginBottom: -5 }}
+                >
+                    Projetos
+                </Typography.Title>
+            </Row>
+            <Row id="projects-section" className="portfolio-body-styles">
+                <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <div style={{ flex: 2, position: 'relative' }}>
+                        <Card
+                            hoverable
+                            style={{
+                                width: 500,
+                                marginRight: -20,
+                                backgroundColor: 'red',
+                                position: 'absolute',
+                                zIndex: 1, // Certifique-se de que o zIndex seja maior do que o Card de baixo
+                            }}
+                        >
+                            <Meta title="Europe Street beat" description="www.instagram.com" />
+                        </Card>
+                        <Card
+                            hoverable
+                            style={{
+                                width: 500,
+                                marginRight: -15,
+                            }}
+                        >
+                            <Meta title="Outro Card" description="Conteúdo do outro card" />
+                        </Card>
+                    </div>
+                    <div style={{ flex: 1 }}>
+                        <Card
+                            hoverable
+                            style={{
+                                width: 200,
+                            }}
+                            cover={
+                                <Image
+                                    preview={false}
+                                    src={basysImg}
+                                    alt="Basys"
+                                />
+                            }
+                        />
+                    </div>
+                </div>
+            </Row>
+
         </Layout>
     );
 }
