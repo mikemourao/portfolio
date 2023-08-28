@@ -2,6 +2,13 @@ import { Button, Card, Col, Image, Layout, Row, Typography } from "antd";
 import logo from '../../assets/Logo.png';
 import smd from '../../assets/smd.png';
 import dash from '../../assets/dash.png';
+import javascriptIcon from '../../assets/js.png'
+import reactIcon from '../../assets/react_icon.png'
+import typescriptIcon from '../../assets/icons8-typescript-100.png'
+import nodeIcon from '../../assets/node.png'
+import figma from '../../assets/figma.png'
+import blenderIcon from '../../assets/blender.png'
+import print3dIcon from '../../assets/3d.png'
 import user from '../../assets/Me.svg';
 import './styles.css';
 
@@ -234,6 +241,56 @@ export function App() {
                     {<p>Uma ampla gama de tecnologias, tanto no âmbito do desenvolvimento de software quanto em outras áreas,<br></br>
                         compõe meu cenário atual. A seguir, destaco algumas delas:</p>}
                 </Typography.Title>
+            </Row>
+            <Row className="portfolio-body-styles" style={{marginTop: 0}}>
+                <Col>
+                    <Image
+                        preview={false}
+                        style={{ padding: 15 }}
+                        src={javascriptIcon}
+                        alt="javascript"
+                    />
+                    <Image
+                        preview={false}
+                        style={{ padding: 15 }}
+                        src={reactIcon}
+                        alt="react"
+                    />
+                    <Image
+                        preview={false}
+                        style={{ padding: 15 }}
+                        src={typescriptIcon}
+                        alt="typescript"
+                    />
+                    <Image
+                        preview={false}
+                        style={{ padding: 15 }}
+                        src={nodeIcon}
+                        alt="Node"
+                    />
+                    <Image
+                        preview={false}
+                        style={{ padding: 15 }}
+                        src={figma}
+                        alt="Figma"
+                    />
+                </Col>
+            </Row>
+            <Row className="portfolio-body-styles" style={{marginTop: 0}}>
+                <Col>
+                    <Image
+                        preview={false}
+                        style={{ padding: 15 }}
+                        src={blenderIcon}
+                        alt="Blender"
+                    />
+                    <Image
+                        preview={false}
+                        style={{ padding: 15 }}
+                        src={print3dIcon}
+                        alt="Portfolio Mike"
+                    />
+                </Col>
             </Row>
         </Layout>
     );
