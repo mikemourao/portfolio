@@ -96,7 +96,7 @@ export function App() {
             <Row id="about-section" className="portfolio-body-styles">
                 <Typography.Title
                     level={1}
-                    style={{ color: "#FFFF" }}
+                    style={{ color: "#FFFF", marginBottom: -5 }}
                 >
                     Experiência de Trabalho
                 </Typography.Title>
@@ -158,6 +158,82 @@ export function App() {
                         </Card>
                     </Col>
                 </Row>
+            </Row>
+            <Row className="portfolio-body-styles">
+                <Row gutter={30}>
+                    <Col span={12}>
+                        <Card bordered={false} className="portfolio-card-styles">
+                            <Row>
+                                <Col span={12}>
+                                    <Image
+                                        style={{ padding: 15 }}
+                                        src={smd}
+                                        alt="Portfolio Mike"
+                                    />
+                                </Col>
+                                <Col span={12}>
+                                    <Typography.Title
+                                        level={3}
+                                        style={{ color: "#FFFF" }}
+                                    >
+                                        Experiência de Trabalho
+                                    </Typography.Title>
+                                    <Typography.Title
+                                        italic
+                                        style={{ color: "#FFFF", fontSize: 12 }}
+                                    >
+                                        Descrição da experiência de trabalho
+                                    </Typography.Title>
+                                </Col>
+                            </Row>
+                        </Card>
+                    </Col>
+                    <Col span={12}>
+                        <Card bordered={false} className="portfolio-card-styles">
+                            <Row>
+                                <Col span={12}>
+                                    <Image
+                                        style={{ padding: 15 }}
+                                        src={dash}
+                                        alt="Portfolio Mike"
+                                    />
+                                </Col>
+                                <Col span={12}>
+                                    <Typography.Title
+                                        level={3}
+                                        style={{ color: "#FFFF" }}
+                                    >
+                                        Experiência de Trabalho
+                                    </Typography.Title>
+                                    <Typography.Title
+                                        italic
+                                        style={{ color: "#FFFF", fontSize: 12 }}
+                                    >
+                                        Descrição da experiência de trabalho
+                                    </Typography.Title>
+                                </Col>
+                            </Row>
+                        </Card>
+                    </Col>
+                </Row>
+            </Row>
+            <Row className="portfolio-body-styles" align="middle">
+                <Typography.Title
+                    level={1}
+                    style={{ color: "#FFFF" }}
+                >
+                    Tecnologias
+                </Typography.Title>
+            </Row>
+            <Row className="portfolio-body-styles">
+                <Typography.Title
+                    italic
+                    level={5}
+                    style={{ color: "#FFFF", marginTop: -30 }}
+                >
+                    {<p>Uma ampla gama de tecnologias, tanto no âmbito do desenvolvimento de software quanto em outras áreas,<br></br>
+                        compõe meu cenário atual. A seguir, destaco algumas delas:</p>}
+                </Typography.Title>
             </Row>
         </Layout>
     );
