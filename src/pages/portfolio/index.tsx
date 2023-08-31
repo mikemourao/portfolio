@@ -1,4 +1,5 @@
-import { Button, Card, Col, Image, Layout, Row, Typography } from "antd";
+import { Avatar, Button, Card, Col, FloatButton, Image, Layout, Row, Space, Typography } from "antd";
+import { LinkedinOutlined, InstagramOutlined } from '@ant-design/icons';
 import logo from '../../assets/Logo.png';
 import smd from '../../assets/smd.png';
 import dash from '../../assets/dash.png';
@@ -11,10 +12,12 @@ import blenderIcon from '../../assets/blender.png'
 import print3dIcon from '../../assets/3d.png'
 import user from '../../assets/Me.svg';
 import basysImg from '../../assets/basys.jpeg';
-const { Meta } = Card;
 import './styles.css';
 
+const { Meta } = Card;
+
 export function App() {
+
     const scrollToAbout = () => {
         const aboutSection = document.getElementById('about-section');
         if (aboutSection) {
@@ -42,6 +45,11 @@ export function App() {
             contactSection.scrollIntoView({ behavior: 'smooth' });
         }
     };
+
+    const aqui = () => {
+        console.log('chamada para contatos');
+    }
+
     return (
         <Layout className="portfolio-layout-aling">
             <Row className="portfolio-header-styles" justify="center" align="middle">
@@ -460,10 +468,15 @@ export function App() {
                     {<p>Sou um profissional que busca uma equipe multifuncional comprometida com a melhoria da vida das pessoas<br></br>
                         por meio de software intuitivo. Se você tiver um projeto em mente, gostaria de saber mais.<br></br>
                         <br></br>
-                        mikeigor.b@hotmail.com
-                    </p>}                
+                        <a href="mailto:mikeigor.b@hotmail.com">mikeigor.b@hotmail.com</a>
+                    </p>}
                 </Typography.Title>
             </Row>
+            <Space size={16} wrap style={{justifyContent: "center"}}>
+                <Avatar size={64} icon={<LinkedinOutlined />} onClick={aqui}/>
+                <Avatar size={64} icon={<InstagramOutlined />} onClick={aqui}/>
+            </Space>
+            <FloatButton.BackTop />
         </Layout>
     );
 }
