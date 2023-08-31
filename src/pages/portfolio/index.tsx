@@ -36,6 +36,12 @@ export function App() {
         }
     };
 
+    const scrollToContact = () => {
+        const contactSection = document.getElementById('contact-section');
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
     return (
         <Layout className="portfolio-layout-aling">
             <Row className="portfolio-header-styles" justify="center" align="middle">
@@ -93,6 +99,18 @@ export function App() {
                         onClick={scrollToProjects}
                     >
                         Projects
+                    </Button>
+                    <Button
+                        type="text"
+                        style={{
+                            margin: '0 10px',
+                            color: "#ffff",
+                            fontWeight: "bold",
+                            fontSize: 18
+                        }}
+                        onClick={scrollToContact}
+                    >
+                        Contact
                     </Button>
                 </Col>
             </Row>
@@ -331,7 +349,7 @@ export function App() {
                     Projetos
                 </Typography.Title>
             </Row>
-            <Row id="projects-section" className="portfolio-body-styles">
+            <Row className="portfolio-body-styles">
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <div style={{ flex: 2, position: 'relative' }}>
                         <Card
@@ -344,10 +362,10 @@ export function App() {
                                 zIndex: 1, // Certifique-se de que o zIndex seja maior do que o Card de baixo
                             }}
                         >
-                            <Meta 
-                                title="BOARD ASSEMBLY SYSTEM (BASYS)" 
+                            <Meta
+                                title="BOARD ASSEMBLY SYSTEM (BASYS)"
                                 description="Software criado para acompanhamento e rastreio de placas SMD, do inicio ao fim do processo.
-                                skills utilizadas: React, Typescript, Ant Designer, Javascript" 
+                                skills utilizadas: React, Typescript, Ant Designer, Javascript"
                             />
                         </Card>
                         <Card
@@ -378,7 +396,7 @@ export function App() {
                     </div>
                 </div>
             </Row>
-            <Row id="projects-section" className="portfolio-body-styles">
+            <Row className="portfolio-body-styles">
                 <div style={{ display: 'flex', alignItems: 'center', marginBottom: 20 }}>
                     <div style={{ flex: 2, position: 'relative' }}>
                         <Card
@@ -391,10 +409,10 @@ export function App() {
                                 zIndex: 1, // Certifique-se de que o zIndex seja maior do que o Card de baixo
                             }}
                         >
-                            <Meta 
-                                title="BOARD ASSEMBLY SYSTEM 2 - DASHBOARD (BASYS-2)" 
+                            <Meta
+                                title="BOARD ASSEMBLY SYSTEM 2 - DASHBOARD (BASYS-2)"
                                 description="Software criado para acompanhamento e rastreio de placas SMD, do inicio ao fim do processo.
-                                skills utilizadas: React, Typescript, Ant Designer, Javascript" 
+                                skills utilizadas: React, Typescript, Ant Designer, Javascript"
                             />
                         </Card>
                         <Card
@@ -424,6 +442,27 @@ export function App() {
                         />
                     </div>
                 </div>
+            </Row>
+            {/* contact */}
+            <Row id="contact-section" className="portfolio-body-styles">
+                <Typography.Title
+                    level={1}
+                    style={{ color: "#FFFF", marginBottom: -5 }}
+                >
+                    Contatos
+                </Typography.Title>
+            </Row>
+            <Row id="contact-section" className="portfolio-body-styles">
+                <Typography.Title
+                    level={5}
+                    style={{ color: "#FFFF", marginBottom: -5 }}
+                >
+                    {<p>Sou um profissional que busca uma equipe multifuncional comprometida com a melhoria da vida das pessoas<br></br>
+                        por meio de software intuitivo. Se você tiver um projeto em mente, gostaria de saber mais.<br></br>
+                        <br></br>
+                        mikeigor.b@hotmail.com
+                    </p>}                
+                </Typography.Title>
             </Row>
         </Layout>
     );
