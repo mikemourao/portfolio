@@ -472,7 +472,7 @@ export function App() {
                     </p>}
                 </Typography.Title>
             </Row>
-            <Space size={16} wrap style={{justifyContent: "center"}}>
+            <Space size={16} wrap style={{justifyContent: "center", marginBottom: 100}}>
                 <Avatar size={64} icon={<LinkedinOutlined />} onClick={aqui}/>
                 <Avatar size={64} icon={<InstagramOutlined />} onClick={aqui}/>
             </Space>
