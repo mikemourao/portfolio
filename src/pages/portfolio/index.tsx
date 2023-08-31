@@ -335,25 +335,30 @@ export function App() {
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <div style={{ flex: 2, position: 'relative' }}>
                         <Card
+                            className="projects-card-style"
                             hoverable
                             style={{
                                 width: 500,
                                 marginRight: -20,
-                                backgroundColor: 'red',
                                 position: 'absolute',
                                 zIndex: 1, // Certifique-se de que o zIndex seja maior do que o Card de baixo
                             }}
                         >
-                            <Meta title="Europe Street beat" description="www.instagram.com" />
+                            <Meta 
+                                title="BOARD ASSEMBLY SYSTEM (BASYS)" 
+                                description="Software criado para acompanhamento e rastreio de placas SMD, do inicio ao fim do processo.
+                                skills utilizadas: React, Typescript, Ant Designer, Javascript" 
+                            />
                         </Card>
                         <Card
                             hoverable
                             style={{
                                 width: 500,
                                 marginRight: -15,
+                                border: "none",
+                                backgroundColor: 'rgba(255, 255, 255, 0)', // Transparência de 50%
                             }}
                         >
-                            <Meta title="Outro Card" description="Conteúdo do outro card" />
                         </Card>
                     </div>
                     <div style={{ flex: 1 }}>
@@ -373,7 +378,53 @@ export function App() {
                     </div>
                 </div>
             </Row>
-
+            <Row id="projects-section" className="portfolio-body-styles">
+                <div style={{ display: 'flex', alignItems: 'center', marginBottom: 20 }}>
+                    <div style={{ flex: 2, position: 'relative' }}>
+                        <Card
+                            className="projects-card-style"
+                            hoverable
+                            style={{
+                                width: 500,
+                                marginRight: -20,
+                                position: 'absolute',
+                                zIndex: 1, // Certifique-se de que o zIndex seja maior do que o Card de baixo
+                            }}
+                        >
+                            <Meta 
+                                title="BOARD ASSEMBLY SYSTEM 2 - DASHBOARD (BASYS-2)" 
+                                description="Software criado para acompanhamento e rastreio de placas SMD, do inicio ao fim do processo.
+                                skills utilizadas: React, Typescript, Ant Designer, Javascript" 
+                            />
+                        </Card>
+                        <Card
+                            hoverable
+                            style={{
+                                width: 500,
+                                marginRight: -15,
+                                border: "none",
+                                backgroundColor: 'rgba(255, 255, 255, 0)', // Transparência de 50%
+                            }}
+                        >
+                        </Card>
+                    </div>
+                    <div style={{ flex: 1 }}>
+                        <Card
+                            hoverable
+                            style={{
+                                width: 200,
+                            }}
+                            cover={
+                                <Image
+                                    preview={false}
+                                    src={basysImg}
+                                    alt="Basys"
+                                />
+                            }
+                        />
+                    </div>
+                </div>
+            </Row>
         </Layout>
     );
 }
